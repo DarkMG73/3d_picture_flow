@@ -1,0 +1,112 @@
+body {
+  background:black;
+}
+
+#wrapper {
+  position: relative;
+  width:400px;
+   height:400px;
+  margin: 90px 300px;
+}
+
+#inner-wrapper {
+  position:absolute;
+  display:block;
+  width:100%;
+perspective:600px;
+  
+}
+
+.gijt-pic-holder {
+  position:absolute;
+  box-sizing: border-box;
+  width: 400px;
+  left: 0;
+  top:0;
+  background: black;
+  border: 3px solid black;
+  padding: 3px;
+  border-radius: 5%;
+  transform: rotatey(90deg);
+ 
+}
+.gijt-pic-holder img {
+    display: block;
+    border-radius: 5%;
+}
+.gijt-pic-holder img::selection {
+    background-color: transparent;
+}
+.gijt-pic-holder h1 {
+    top: 3%;
+    left: 11%;
+    position: absolute;
+    color: white;
+    font-size: -webkit-xxx-large;
+}
+
+.inner_pers_box {
+  transform: rotatey(0deg);
+  transform-origin:center;
+}
+
+button {
+  position:relative;
+  top:70%;
+  left:70%;
+  width: 5em;
+  height:50px;
+  background: #b1b1b1;
+  border-radius: 10px;  
+}
+
+.left-s {
+  left:-0%;
+ transform: translatex(-50%) rotatey(-45deg) translatex(-50%) scaley(1);
+  transform-origin: center;
+   transition: all 2s ease; 
+   transition-timing-function: cubic-bezier(0.34,.5,0.55,1);
+  z-index:-1
+}
+
+.center-s {
+  transform: rotatey(0deg);
+  transform-origin:center;
+  left:0%;
+  transition: all 2s ease;
+   transition-timing-function: cubic-bezier(0.44,.4,0.58,1);
+  z-index: 3;
+}
+
+.right-s  {
+  position: relative;
+  left:0%;
+  transform: translatex(50%) rotatey(45deg) translatex(50%) translatez(0px) scaley(1); 
+  transition: all 2s ease; 
+   transition-timing-function: cubic-bezier(0.44,.53,0.56,.994);
+  transform-origin:center;
+  
+  z-index:-1;
+}
+
+.off-right, .off-right-next {
+  
+   left: 0%;
+   transition: all 2s ease;
+   transition-timing-function: cubic-bezier(0.46,.39,0.5,.533);
+   transform-origin: left;
+   transform: translateX(50%) rotateY(67.25deg)
+   translateX(50%) translatez(50px) scale(0);
+  transform-origin: right;
+   z-index:-2;
+   opacity: 0;
+}
+
+.off-left {
+      left: 0%;
+    transition: all 2s ease;
+   transition-timing-function: cubic-bezier(0.3,.9,0.5,.533);
+    transform-origin: center;
+ transform: translateX(-84%) rotateY(-67.25deg) translateX(-160%) scalex(1);
+  z-index:-3;
+}
