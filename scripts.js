@@ -1,3 +1,6 @@
+$( document).ready(function() {
+
+
 //*******************************************
 //****************Settings ******************
 //*******************************************
@@ -109,3 +112,4 @@ $('#left-button').on('click', moveAllLeft);
 
 
 $('.left-s, .center-s, .right-s, .off-right, .off-right-next, .off-left').css('transform-origin', gijt_transitionOrigin).css('transition', 'all ' + gijt_transitionSpeed + ' ease');
+});
